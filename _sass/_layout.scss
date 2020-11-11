@@ -1,0 +1,69 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    margin: 0 auto;
+    max-width: 50rem;
+    padding: 1rem;
+}
+
+strong, b, h1, h2, h3, h4 {
+	font-weight: bold;
+}
+
+hr {
+    background: black;
+    border: 0;
+    height: 2px;
+    margin: 0rem 0;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+
+    tr {
+        border-bottom: 1px solid black;
+    }
+
+    td {
+        padding: 0.5rem;
+    }
+}
+
+nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: right;
+
+        li {
+            display: inline-block;
+        }
+    }
+    a {
+        margin: 0.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+footer {
+    margin: 2rem 0;
+}
+header {
+    h1 {
+        margin-block-start: 0.1em;
+        margin-block-end: 0.1em;
+        padding-left: 1.0rem;
+        font-size: 1.7em;
+    }  
+    
+}
+
+

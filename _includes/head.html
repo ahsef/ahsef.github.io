@@ -1,0 +1,31 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% seo %}
+      <script type="text/javascript">
+
+    var _gaq = _gaq || [];<a href="../index.html" id="" title="index">index</a>
+    _gaq.push(['_setAccount', 'UA-48873539-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
+  <link rel="sitemap" type="application/xml" title="sitemap" href="{{ site.baseurl }}/sitemap.xml" />
+  <style type="text/css">
+    {% capture include_to_scssify %}
+      {% include inline.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+  </style>
+  <link rel="stylesheet" href="/assets/slideshow.css">
+  <style>
+  .mySlides {display:none;}
+  </style>
+</head>
