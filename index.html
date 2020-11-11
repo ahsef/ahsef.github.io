@@ -1,7 +1,89 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+---
+layout: default
+title: Index
+---
+
+<article class="post index" role="article">
+    <p>The Alliance High School Endowment Fund(AHSEF) is a US 501(3)(c) charitable organization that was founded to promote academic and overall student excellence at <a href="http://alliancehighschool.sc.ke/">Alliance High School, Kenya.</a></p>
+   
+    <p>AHSEF has two funds, the Academic Scholarship Fund and the Sports Directed Fund. The Academic Scholarship Fund awards scholarships to students based on academic merit. The Sports Directed Fund provides financial support for various team sports at Alliance High School in the spirit of encouraging students to excel in academics and sports. Since its founding, AHSEF has awarded $13,400 in academic scholarships and $2,000 in sports disbursements. </p>
+   
+    <p>All gifts to AHSEF in the US are tax deductible and are eligible for employer matching. <a href="/donate" style="font-weight: bold;">Donate now</a></p>
+</article>      
+
+<div class="w3-content w3-display-container" style="width:90%">
+
+    <div class="w3-display-container mySlides">
+        <img src="/images/2014-f1-1.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-small w3-container w3-padding-small w3-black w3-centered">
+            2015 Academic Scholarship Recipient - Samuel Otieno Gariy
+        </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+        <img src="/images/2015-f1-1.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-small w3-container w3-padding-small w3-black w3-centered">
+            2016 Academic Scholarship Recipient - Njoroge Melvin Baraka
+        </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+        <img src="/images/2016-all.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-small w3-container w3-padding-small w3-black w3-centered">
+            2017 Academic Scholarship Recipients
+        </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+        <img src="/images/2017-all.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-small w3-container w3-padding-small w3-black w3-centered">
+            2018 Academic Scholarship Recipients
+        </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+        <img src="/images/2018-f1.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-small w3-container w3-padding-small w3-black w3-centered">
+            2019 Scholarship Recipients - Troon Amani Nandoya, Nderitu Simon Gitonga and Njiru Nixon Njeru
+        </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+        <img src="/images/2016-rugby.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-small w3-container w3-padding-small w3-black w3-centered">
+            2016 Rugby Sponsorship
+        </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+        <img src="/images/2018-rugby.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-small w3-container w3-padding-small w3-black w3-centered">
+            2018 Rugby Sponsorship
+        </div>
+    </div>
+    
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+  
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+
