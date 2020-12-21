@@ -8,6 +8,6 @@ If you would like to contribute to the fund, you can do so through cheque, payro
 
 Happy holidays!
 
-Miano Njoka, Smith 20B, Secretary AHSEF
-Tanvir Sharif, Livingstone 1, Treasurer, AHSEF
-Jacob Sitati, Grieve 14B, President,  AHSEF
+Miano Njoka, Smith 20B, Secretary AHSEF.  
+Tanvir Sharif, Livingstone 1, Treasurer, AHSEF.  
+Jacob Sitati, Grieve 14B, President, AHSEF.  
