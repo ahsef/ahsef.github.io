@@ -31,4 +31,4 @@ J. Mwarage.
 K. Muchina.  
 M. Mbaya.  
 
-Contributions can be made to AHSEF through https://www.ahsef.org/donate
+Contributions can be made to AHSEF through [https://www.ahsef.org/donate](https://www.ahsef.org/donate)
