@@ -8,9 +8,9 @@ AHSEF has offered to facilitate the collection of funds from old boys and other 
 Based on solid pledges from old boys in the US to raise an initial amount of $3,000, a Vanguard account will be created specifically for collecting and
 disbursing US-based old boy donations for the Chapel Project.
 
-Initial funds can be collected towards the $3,000 Vanguard account using the paypal link below.
+Initial funds can be collected towards the $3,000 Vanguard account using the Paypal link below.
 
-https://www.paypal.com/donate/?hosted_button_id=FVAH97HBZC73E
+[Paypal](https://www.paypal.com/donate/?hosted_button_id=FVAH97HBZC73E)
 
 ### Investment policy
 
