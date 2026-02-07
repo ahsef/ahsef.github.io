@@ -1,38 +1,92 @@
 ---
 layout: default
+title: Donate
 ---
-	<p>
-	The Alliance High School Endowment Fund(AHSEF) is a US 501(3)(c) charitable organization. All gifts to the fund from US tax payers are tax deductible. </p>
-    <h3>Check</h3>    
-   
-<pre>
-Gift checks can be sent directly to Vanguard at the address below.
 
-Please specify which endowment your gift should be made payable to:
+<div class="donate-hero">
+    <h1>Support Alliance High School</h1>
+    <p>Your tax-deductible gift helps provide scholarships and resources for students at Alliance High School, Kenya.</p>
+</div>
 
-* Academic : 41691384
-* Sports Scholarship : 86516813
-* Need Scholarship : 61355063
-* Multi-Purpose Hall : 51596650
+<div class="donate-grid">
 
-Vanguard,
-P. O. Box 982901,
-El Paso, TX 79998
-</pre> 
-    
-    <h3> Paypal</h3>
-	Gifts can be made through Paypal by clicking <a href="https://www.paypal.com/donate/?hosted_button_id=FVAH97HBZC73E">here</a>.
+    <!-- Stripe Card - Primary -->
+    <section class="card card-stripe">
+        <div class="card-badge">Recommended</div>
+        <h3>Stripe</h3>
+        <p>Make a secure one-time or recurring donation with credit card.</p>
+        
+        <div class="stripe-container">
+            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+            <stripe-buy-button
+                buy-button-id="buy_btn_1SgKHFRjcTuPJpPvT5Tt7MEP"
+                publishable-key="pk_live_51SQ8qjRjcTuPJpPvqbUb7ghQHIRKep1S33myObxXLPoFweBrn8wEP3w75BOCO1BnPPxdnJQc164KWtQClSV4LpKs00frCdYHeG"
+            >
+            </stripe-buy-button>
+        </div>
+        
+        <p class="card-note">Secure payment powered by Stripe</p>
+    </section>
 
-	<br/>
+    <!-- PayPal Card -->
+    <section class="card card-paypal">
+        <h3>PayPal</h3>
+        <p>Donate via PayPal for quick and easy giving.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=FVAH97HBZC73E" class="btn-paypal" target="_blank">
+            Donate with PayPal
+        </a>
+        <p class="card-note">Transaction fee: 2.2% + $0.30. Transfers to Vanguard quarterly.</p>
+    </section>
 
-	Gifts collected through Paypal will be transferred to the Vanguard account on a quarterly basis.
-	Please note there is an associated Paypal transaction fee of 2.2% + $0.30. 
+    <!-- Check Card -->
+    <section class="card card-check">
+        <h3>Mail a Check</h3>
+        <p>Send checks directly to Vanguard. Please specify which fund:</p>
+        
+        <div class="fund-list">
+            <div class="fund-option">
+                <span class="fund-name">Academic Scholarship</span>
+                <span class="fund-code">41691384</span>
+            </div>
+            <div class="fund-option">
+                <span class="fund-name">Sports Scholarship</span>
+                <span class="fund-code">86516813</span>
+            </div>
+            <div class="fund-option">
+                <span class="fund-name">Need-Based Scholarship</span>
+                <span class="fund-code">61355063</span>
+            </div>
+            <div class="fund-option">
+                <span class="fund-name">Multi-Purpose Hall</span>
+                <span class="fund-code">51596650</span>
+            </div>
+        </div>
+        
+        <address class="mailing-address">
+            <strong>Vanguard</strong><br>
+            P.O. Box 982901<br>
+            El Paso, TX 79998
+        </address>
+    </section>
 
-   <h3>Payroll deductions</h3>
-    Many US employers support their employees donating to their preferred causes through payroll deductions. If donations to AHSEF are not yet available through payroll deductions at your company, please get in touch, <a href="mailto:secretary@ahsef.org">secretary@ahsef.org</a> and we'll work with you to set it up. 
-    
-	<h3>Other ways of supporting Alliance High School</h3>
+    <!-- Payroll Card -->
+    <section class="card card-payroll">
+        <h3>Payroll Deduction</h3>
+        <p>Many US employers support charitable giving through payroll deductions.</p>
+        <p>If AHSEF isn't available at your company, contact us and we'll help set it up.</p>
+        <a href="mailto:secretary@ahsef.org" class="btn-outline">Contact Us</a>
+    </section>
 
-	<ul>
-		<li>Kenyan based sister endowment, <a href="http://alliancehighschool.sc.ke/the-endowment-fund">AHS Endowment Fund Trust</a>, that supports the educational experience at AHS through scholarships and coverage of capital & operating costs in perpetuity</li>
-	</ul>
+    <!-- Tax Info -->
+    <section class="card card-tax-info">
+        <span class="tax-label">501(c)(3)</span>
+        <p><strong>Tax Deductible</strong> — All gifts to AHSEF from US taxpayers are fully tax deductible and eligible for employer matching programs.</p>
+    </section>
+
+    <!-- Other Ways -->
+    <section class="card card-other">
+        <h3>Other Ways to Support AHS</h3>
+        <p>Consider also supporting the Kenya-based <a href="http://alliancehighschool.sc.ke/the-endowment-fund">AHS Endowment Fund Trust</a>, which supports scholarships and capital & operating costs in perpetuity.</p>
+    </section>
+
+</div>

@@ -1,8 +1,35 @@
 <header role="banner">
-    <div class="w3-row">
-        <div class="w3-col" style="width:10%"><img src="/logo.png" style="max-width:100%" alt="Alliance High School Logo"/></div>
-        <div class="w3-col" style="width:45%"><h1>{{ site.title }}</h1></div>
-        <div class="w3-col" style="width:45%">{% include navigation.html %}</div>
+    <div class="header-container">
+        <a href="/" class="header-logo"><img src="/logo.png" alt="Alliance High School Logo"/></a>
+        <h1 class="header-title">{{ site.title }}</h1>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-nav">
+            {% include navigation.html %}
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <nav role="navigation">
+            <ul>
+                <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                <li><a href="/blog" {% if page.url == "/blog" %}class="active"{% endif %}>Blog</a></li>
+                <li><a href="/about" {% if page.url == "/about" %}class="active"{% endif %}>About</a></li>
+                <li><a href="/donate" {% if page.url == "/donate" %}class="active"{% endif %}>Donate</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
-<hr>
+
+{% raw %}
+<script type="text/javascript">
+function toggleMobileMenu() {
+    var menu = document.getElementById('mobileMenu');
+    var btn = document.querySelector('.mobile-menu-btn');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+}
+</script>
+{% endraw %}

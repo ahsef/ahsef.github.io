@@ -1,80 +1,239 @@
+// ========================================
+// AHSEF - MIT-Inspired Modern Design
+// Clean, Bold, High-Tech Academic
+// ========================================
+
+// CSS Variables
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-400: #a3a3a3;
+  --gray-600: #525252;
+  --gray-800: #262626;
+  --gray-900: #171717;
+  
+  --accent: #635BFF;           // MIT-style red (we'll use a sophisticated crimson)
+  --accent-dark: #4f46e5;
+  --blue: #1e3a5f;             // Deep academic blue
+  --gold: #b8860b;             // Subtle gold accent
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'DM Sans', 'Inter', sans-serif;
+  
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Import modern fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+
+// Base typography
 body {
+  font-family: var(--font-sans);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: var(--gray-800);
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  zoom: 1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--white);
 }
 
-header p strong {
-    text-transform: uppercase;
+// Headings - Bold and clean
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
-.post-title {
-    background: black;
-    margin: 10rem 0;
-    color: white;
-    padding: 2rem;
-    font-weight: bold;
+h1 { 
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
 }
 
-a,a:visited {
-  color: black;
+h2 { 
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
 
+h3 { 
+  font-size: 1.25rem;
+  color: var(--gray-800);
+  margin-top: 2rem;
+}
+
+h4 { 
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-600);
+}
+
+// Paragraphs
+p {
+  margin-bottom: 1.25rem;
+  color: var(--gray-600);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+// Links - Clean with accent color
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  
   &:hover {
-    color: dodgerblue;
+    color: var(--accent-dark);
+  }
+  
+  &:visited {
+    color: var(--accent);
   }
 }
 
+// Active nav link
 a.active {
-    background: black;
-    padding: 0.5rem;
-    color: white;
+  background: var(--gray-900);
+  color: var(--white) !important;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
+// Blockquotes - Editorial style
 blockquote {
-  background: #f9f9f9;
-  border-left: 5px solid black;
-  font-size: 120%;
-  margin: 2rem 0;
-  padding: 1rem;
+  margin: 2.5rem 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 3px solid var(--accent);
+  font-size: 1.125rem;
+  color: var(--gray-700);
+  font-style: italic;
 
   p {
     margin: 0;
+    color: inherit;
   }
-
+  
   footer {
-    font-size: 90%;
-    margin: 1rem 0 0 0;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    color: var(--gray-400);
+    font-style: normal;
   }
 }
 
-dl {
-  dt {
+// Lists
+ul, ol {
+  margin: 0 0 1.5rem;
+  padding-left: 1.25rem;
+  
+  li {
     margin-bottom: 0.5rem;
-  }
-  dd {
-    font-style: italic;
-    margin-bottom: 2rem;
+    color: var(--gray-600);
+    line-height: 1.6;
   }
 }
 
-code, pre {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 100%;
+// Code
+code {
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+  font-size: 0.875em;
+  background: var(--gray-100);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: var(--accent);
 }
 
 pre {
-  overflow: auto;
-  width: 100%;
-  margin-top: 0em;
-  margin-right: 0px;
-  margin-bottom: 0em;
-  margin-left: 0px;
+  background: var(--gray-900);
+  color: var(--gray-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  
+  code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
 }
 
+// Date styling
 .date {
-  opacity: 0.6;
+  font-size: 0.8125rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
 }
+
+// Post title - Bold banner style
+.post-title {
+  background: var(--gray-900);
+  color: var(--white);
+  padding: 3rem 2rem;
+  margin: 0 -2rem 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  
+  @media (min-width: 768px) {
+    padding: 4rem 3rem;
+    margin: 0 -3rem 3rem;
+  }
+}
+
+// Definition lists
+dl {
+  dt {
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.25rem;
+  }
+  dd {
+    color: var(--gray-600);
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+// Strong text
+strong, b {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+// Horizontal rule
+hr {
+  border: none;
+  height: 1px;
+  background: var(--gray-200);
+  margin: 3rem 0;
+}
+
+// Selection
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+// Small text utility
+small {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+// Accent text
+.accent {
+  color: var(--accent);
+}
+

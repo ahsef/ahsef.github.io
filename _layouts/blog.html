@@ -3,13 +3,67 @@ layout: default
 title: Blog
 ---
 
-{% for post in site.posts %}
-<article role="article">
-  <h2><a href="{{ site.baseurl }}{{ post.url }}">
-    {{ post.title }} 
-  </a></h2><time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-  <p>{{ post.content }}</p>
-    
-</article>
-{% endfor %}
+<div class="blog-header">
+    <h1>News & Updates</h1>
+    <p>Stay informed about AHSEF activities, scholarships, and impact stories.</p>
+</div>
 
+<div class="blog-grid">
+{% for post in site.posts %}
+<article class="blog-card" onclick="openModal('modal-{{ forloop.index }}')">
+    <div class="blog-card-date">
+        <span class="blog-day">{{ post.date | date: "%-d" }}</span>
+        <span class="blog-month">{{ post.date | date: "%b" }}</span>
+        <span class="blog-year">{{ post.date | date: "%Y" }}</span>
+    </div>
+    <div class="blog-card-content">
+        <h3>{{ post.title }}</h3>
+        <p class="blog-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
+        <span class="blog-read-more">Read more →</span>
+    </div>
+</article>
+
+<!-- Modal for this post -->
+<div id="modal-{{ forloop.index }}" class="blog-modal" onclick="closeModalOnBackdrop(event, 'modal-{{ forloop.index }}')">
+    <div class="blog-modal-content">
+        <button class="blog-modal-close" onclick="closeModal('modal-{{ forloop.index }}')">&times;</button>
+        <time class="blog-modal-date">{{ post.date | date: "%B %-d, %Y" }}</time>
+        <h2>{{ post.title }}</h2>
+        <div class="blog-modal-body">
+            {{ post.content }}
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+{% raw %}
+<script type="text/javascript">
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function closeModalOnBackdrop(event, modalId) {
+    if (event.target.id === modalId) {
+        closeModal(modalId);
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        var modals = document.querySelectorAll('.blog-modal');
+        modals.forEach(function(modal) {
+            modal.style.display = 'none';
+        });
+        document.body.style.overflow = 'auto';
+    }
+});
+</script>
+{% endraw %}
