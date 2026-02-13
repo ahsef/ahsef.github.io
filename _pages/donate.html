@@ -11,12 +11,17 @@ title: Donate
 <div class="donate-grid">
 
     <!-- Stripe Card - Primary -->
-    <section class="card card-stripe">
-        <div class="card-badge">Recommended</div>
+    <section class="card card-stripe card-featured">
+        <span class="featured-badge">Recommended</span>
         <h3>Stripe</h3>
-        <p>Make a secure one-time or recurring donation with credit card.</p>
+        <p>Make a secure one-time or recurring donation.</p>
         
-        <div class="stripe-container">
+        <div class="stripe-tabs">
+            <button class="stripe-tab active" onclick="switchStripeTab('onetime')">One-Time</button>
+            <button class="stripe-tab" onclick="switchStripeTab('recurring')">Recurring</button>
+        </div>
+        
+        <div class="stripe-content" id="stripe-onetime">
             <script async src="https://js.stripe.com/v3/buy-button.js"></script>
             <stripe-buy-button
                 buy-button-id="buy_btn_1SgKHFRjcTuPJpPvT5Tt7MEP"
@@ -25,8 +30,36 @@ title: Donate
             </stripe-buy-button>
         </div>
         
+        <div class="stripe-content" id="stripe-recurring" style="display: none;">
+            <stripe-buy-button
+                buy-button-id="buy_btn_1T0HSFRjcTuPJpPvYApv7lsy"
+                publishable-key="pk_live_51SQ8qjRjcTuPJpPvqbUb7ghQHIRKep1S33myObxXLPoFweBrn8wEP3w75BOCO1BnPPxdnJQc164KWtQClSV4LpKs00frCdYHeG"
+            >
+            </stripe-buy-button>
+        </div>
+        
         <p class="card-note">Secure payment powered by Stripe</p>
     </section>
+    
+    {% raw %}
+    <script type="text/javascript">
+    function switchStripeTab(tab) {
+        var tabs = document.querySelectorAll('.stripe-tab');
+        tabs.forEach(function(t) { t.classList.remove('active'); });
+        
+        document.getElementById('stripe-onetime').style.display = 'none';
+        document.getElementById('stripe-recurring').style.display = 'none';
+        
+        if (tab === 'onetime') {
+            tabs[0].classList.add('active');
+            document.getElementById('stripe-onetime').style.display = 'block';
+        } else {
+            tabs[1].classList.add('active');
+            document.getElementById('stripe-recurring').style.display = 'block';
+        }
+    }
+    </script>
+    {% endraw %}
 
     <!-- PayPal Card -->
     <section class="card card-paypal">
