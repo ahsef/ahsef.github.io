@@ -29,3 +29,6 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 gem 'http_parser.rb', git: "https://github.com/tmm1/http_parser.rb.git"
+
+# Pin ffi to a Ruby 2.7-compatible version (1.17+ requires Ruby >= 3.0).
+gem "ffi", "~> 1.16.3"
